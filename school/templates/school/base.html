@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
     <link rel="stylesheet" type="text/css" href="{% static 'school/main.css' %}">
+<!--    <link rel="stylesheet" type="text/css" href="{% static 'school/app.css' %}">-->
 
     {% if title %}
         <title>Django Blog - {{ title }}</title>
@@ -55,6 +56,7 @@
           {% endif %}
           {% block content %}{% endblock %}
         </div>
+        {% if user.is_authenticated %}
         <div class="col-md-4">
           <div class="content-section">
             <h3>Menu</h3>
@@ -72,6 +74,7 @@
             </p>
           </div>
         </div>
+        {% endif %}
       </div>
     </main>
 
