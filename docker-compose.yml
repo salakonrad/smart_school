@@ -7,7 +7,7 @@ services:
     environment:
       - MYSQL_ROOT_PASSWORD=password
     volumes:
-      - ~/Documents/STUDIA/smart_school_db/db_files:/var/lib/mysql
+      - ~/Documents/STUDIA/praca-inzynierska/smart_school_db/db_files:/var/lib/mysql
 
   phpmyadmin:
     image: phpmyadmin/phpmyadmin
