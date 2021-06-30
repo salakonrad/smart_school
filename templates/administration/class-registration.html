@@ -1,0 +1,14 @@
+{% extends 'base/base.html' %}
+{% block content %}
+  <div class="card">
+    <div class="card-header">Rejestracja klasy do profilu</div>
+    <div class="card-body">
+      <form class="" action="" method="post">
+        {% csrf_token %}
+        {{ forms.as_p }}
+        <button type="submit" class="btn btn-primary">Dodaj</button>
+      </form>
+    </div>
+  </div>
+  <a class="btn btn-secondary btn-sn mt-1" href="{% url 'administration-menu' %}">Powrót</a>
+{% endblock %}

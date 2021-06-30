@@ -1,0 +1,15 @@
+{% extends "base/base.html" %}
+{% block content %}
+    <h1>Administracja</h1>
+
+    <div class="row">
+      <div class="col-4">
+        <div class="list-group" id="list-tab" role="tablist">
+          <a class="list-group-item list-group-item-action" id="list-home-list" href="{% url 'class-list' %}" role="tab" aria-controls="home">Lista Klas</a>
+          <a class="list-group-item list-group-item-action" id="list-profile-list" href="{% url 'create-class' %}" role="tab" aria-controls="profile">Dodanie nowej klasy</a>
+          <a class="list-group-item list-group-item-action" id="list-messages-list" href="{% url 'class-registration' %}" role="tab" aria-controls="messages">Rejestracja klasy do profilu</a>
+        </div>
+      </div>
+    </div>
+
+{% endblock content %}

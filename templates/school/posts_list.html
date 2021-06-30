@@ -1,6 +1,26 @@
 {% extends "base/base.html" %}
 {% block content %}
     <h1>Frekwencja</h1>
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Uczeń</th>
+          <th scope="col">Data</th>
+          <th scope="col">Rodzaj absencji</th>
+        </tr>
+      </thead>
+      {% for post in posts %}
+      <tbody>
+        <tr>
+          <th scope="row">{{ loop.index }}</th>
+          <td>{{ post.uczen }}</td>
+          <td>{{ post.date_posted|date:"F d, Y" }}</td>
+          <td>{{ post.typ_nieobecnosci }}</td>
+        </tr>
+      </tbody>
+      {% endfor %}
+    </table>
     {% for post in posts %}
         <article class="media content-section">
           <img class="rounded-circle article-img" src="{{ post.author.profile.image.url }}">
