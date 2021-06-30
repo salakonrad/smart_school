@@ -60,7 +60,7 @@
           {% block content %}{% endblock %}
         </div>
         {% if user.is_authenticated %}
-          {% if not request.get_full_path == '/' %}
+          {# if not request.get_full_path == '/' #}
             <div class="col-md-4">
               <div class="content-section">
                 <h3>Menu</h3>
@@ -75,7 +75,7 @@
                 </p>
               </div>
             </div>
-          {% endif %}
+          {# endif #}
         {% endif %}
       </div>
     </main>
