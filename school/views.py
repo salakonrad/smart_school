@@ -37,7 +37,7 @@ class PostDetailView(DetailView):
 
 class PostCreateView(LoginRequiredMixin, CreateView):
     model = Post
-    fields = ['title', 'content']
+    fields = ['uczen', 'typ_nieobecnosci']
 
     def form_valid(self, form):
         form.instance.author = self.request.user
@@ -71,4 +71,4 @@ class PostDeleteView(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
 
 
 def about(request):
-    return render(request, 'school/about.html')
+    return render(request, 'base/about.html')
