@@ -31,7 +31,6 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
-    'management.apps.ManagementConfig',
     'school.apps.SchoolConfig',
     'users.apps.UsersConfig',
     'crispy_forms',
